@@ -1,0 +1,2334 @@
+Você é um **Arquiteto, Engenheiro de Software e Desenvolvedor Full-stack Sênior**. Seu objetivo é **projetar, implementar e criar** um ** **uma nova função da IA do projeto abaixo. Analise a nova função, ligada a busca e suporte acadêmico e implemente-a no corpo do projeto. Depois me envie o novo corpo do projeto:** ````md 
+## Projeto: **Fitversum Lab: O Multiverso Científico da Musculação**
+Vasto Ecossistema SaaS com **IA própria governda e baseada em RAG**. **Focado em **prescrição de treinamento de força auditável**, com **IA baseada em fontes controladas, loja digital, marketplace e admin panel**. Você pergunta, o Fitversum responde com **citações**; você coleta a anamnese, o sistema gera o plano — e tudo sai **padronizado, revisável e pronto para entregar**. Não é um app fitness comum: é um **ecossistema técnico de alta autoridade** para profissionais e instituições que exigem **evidência, governança e performance real. É um ecossistema técnico com fontes científicas controladas e monetização integrada. **Fitversum Lab** é a plataforma premium que transforma ciência em **prescrição do treinamento de força**. Possui diversas características. Entre elas: 
+- **Conteúdo científico proprietário** (livros, artigos, cursos, posts)
+- **E-commerce digital** (download protegido, cupons, afiliados)
+- **IA científica com RAG fechado** (respostas sempre com fontes/citações)
+- **Prescrição de treino** (anamnese → geração → revisão → export PDF/DOCX)
+- **Marketplace** (profissionais vendendo consultoria/serviços)
+- **Admin Panel** (curadoria, upload/indexação, métricas, governança)
+
+**Não é app genérico de treino.** 
+** A regra é: **autoridade científica + rastreabilidade + monetização + alcançe + software escalável.**
+
+---
+
+"## Ciência aplicada. Software escalável. Autoridade. Monetização. Alcançe. Resultados mensuráveis.
+
+O **Fitversum Lab: O Multiverso Científico da Musculação** é um ecossistema SaaS que transforma conhecimento científico em **prescrição de treinamento de força padronizada, auditável e escalável**. Desenvolvida para profissionais, instituições e empresas que exigem **evidência, controle e performance real**. Uma plataforma única que integra **inteligência artificial científica**, prescrição baseada em evidência, marketplace acadêmico e modelos SaaS de monetização.
+
+* Prescrição validada por ciência
+* IA treinada com base autoral controlada
+* Escalabilidade profissional e institucional
+
+---
+
+# 0) VISÃO EXECUTIVA
+
+## 0.1 Posicionamento do Produto
+O **Fitversum Lab** é um ecossistema SaaS científico para treinamento de força que integra:
+- **IA científica baseada em RAG fechado**
+- **Prescrição de treino auditável**
+- **Loja digital / marketplace acadêmico**
+- **Marketplace de mentoria e serviços**
+- **Administração com governança de fontes e métricas**
+
+**Não é app fitness genérico.**  
+A regra central é:
+
+> **Autoridade científica + rastreabilidade + monetização + alcançe + software escalável**
+
+## 0.2 Proposta de Valor
+Você pergunta → o sistema responde com **citações**.  
+Você coleta anamnese → o sistema gera plano **padronizado, revisável e exportável (PDF/DOCX)**.  
+Tudo com **governança**, **controle de acesso**, **planos**, **afiliados** e **métricas**.
+
+---
+
+# 1) PRINCÍPIOS INEGOCIÁVEIS
+
+1. **Toda resposta de IA deve conter evidência/citações** (RAG obrigatório quando aplicável)
+2. **Sem base suficiente → responder com fallback seguro**
+3. **Base primária = conteúdo autoral aprovado**
+4. **Sem acesso irrestrito à internet para responder qualquer coisa**
+5. **Monetização plugável** (assinaturas, loja, afiliados, licenciamento)
+6. **Escala horizontal** e arquitetura modular
+7. **RLS / isolamento por tenant** quando aplicável
+8. **Observabilidade e rastreabilidade** (logs, custos, quotas, scan_id, citationIds)
+
+---
+
+# 2) PÚBLICO-ALVO E TIPOS DE USUÁRIO
+
+## 2.1 Segmentos
+- Personal trainers / Profissionais de educação física
+- Academias / estúdios
+- Universidades / centros de pesquisa
+- Autores / pesquisadores
+- Empresas B2B fitness / educação / wellness
+
+## 2.2 Perfis de acesso (produto)
+### A) Profissionais (personal trainers / autores / editores)
+Acesso amplo às ferramentas (variável por plano).
+
+### B) Alunos
+Acesso restrito:
+- Ver treinos prescritos
+- Enviar anamnese
+- Scanner
+- Fitversum Office (contratar profissionais)
+- Loja e histórico de compras
+- Histórico de treinos/anamneses
+
+---
+
+# 3) MODELO DE NEGÓCIO (PLANOS + LOJA + AFILIADOS)
+
+## 3.1 Planos 
+### Free
+- Feed técnico (visualização)
+- Chat IA básico: **5 interações/mês**
+- Acesso limitado
+
+### Pro
+- Feed + fórum (acesso)
+- IA ilimitada (chat/ferramentas) [política operacional pode manter fair-use]
+- Anamnese
+- **5 prescrições/mês**
+- Cadastro de até **5 alunos**
+- Scanner de equipamentos
+- Acesso à loja (inclusive leitura / catálogo / conteúdos conforme regra)
+- Dashboard de gestão
+
+### Pro+
+- Tudo do Pro
+- Prescrições ilimitadas
+- Cadastro de alunos ilimitado
+- Publicações ilimitadas (feed/fórum)
+- API integrada
+- Isenção de comissão
+- White-label
+- Suporte prioritário
+- Acesso total a funcionalidades
+
+## 3.2 Loja / Publishing
+- Produtos digitais: livros, artigos, cursos, programas de treino, vídeos, audiobooks
+- Formatos: PDF, DOCX, XLSX, MP3, TXT, JPG, PNG, CSV, XML, GFORMS etc.
+- Checkout: Stripe / PayPal / Pix (via integração)
+- Download protegido (signed URL)
+- Submissão de produto por usuários
+- Regra de royalties: **80% para autor**
+- Comissão da plataforma conforme plano
+
+## 3.3 Produtos especiais
+- **My Fit Box** (usuário pode vender seu box)
+- **Fitversum Box** (produto exclusivo do fundador)
+- Regras de distribuição do Fitversum Box:
+  - 8/10 para owner (fundador)
+  - 2/10 distribuído conforme regra definida de publicação/participação (implementação posterior)
+
+## 3.4 Afiliados
+- Usuário pode habilitar perfil de afiliado
+- Links personalizados para:
+  - planos
+  - produtos
+  - serviços
+- Comissão: **50%** do valor de produto vendido via link do afiliado
+- Regra de comissão:
+  - **Pro+ isento de comissão da plataforma** (para suas vendas/serviços conforme regra)
+  - Free e Pro seguem comissão padrão
+
+## 3.5 Ordenação de vitrine (loja / office)
+Ordem de destaque:
+1. Produtos do fundador
+2. Assinantes Pro+
+3. Assinantes Pro
+4. Free
+
+---
+
+# 4) ESCOPO FUNCIONAL (MACRO)
+
+## 4.1 Módulos principais
+1. **Auth / Identity**
+2. **Feed técnico**
+3. **IA (RAG)**
+4. **Anamnese & Prescrição**
+5. **Scanner de equipamentos (Fitscanner)**
+6. **Loja (Fitversum Store / Publishing)**
+7. **Fitversum Office (mentoria + curadoria + marketplace)**
+8. **Admin/Governança**
+9. **Billing & Assinaturas**
+10. **Afiliados**
+11. **Internationalization (PT/EN)**
+
+## 4.2 Flows principais
+1. **Chat IA**: `/chat` → resposta com citações
+2. **Anamnese & Prescrição**: `/prescrever` → formulário → geração → revisão → export
+3. **Scanner**: upload → reconhecimento → sugestão de exercícios/músculos + evidência
+4. **Store**: catálogo → checkout → entitlement → download protegido
+5. **Afiliado**: gerar link → click tracking → conversão
+6. **Admin**: upload/indexação/aprovação de fontes + métricas
+
+---
+
+# 5) ARQUITETURA TÉCNICA (HIGH-LEVEL)
+
+```txt
+[ Next.js Web / PWA ]
+├─ App Router + SSR/SSG
+├─ UI (Tailwind + shadcn/ui)
+├─ Supabase Auth (client/server)
+├─ Middleware (gating por rota/plano/role)
+└─ API calls / Server Actions
+        ↓
+[ NestJS API - Clean Architecture ]
+├─ Modules (AI, Scanner, Store, Training, Admin, Affiliates, Billing...)
+├─ Guards (Auth, Roles, Plans)
+├─ Quotas + Rate Limits
+├─ RAG Orchestrator (Qdrant + retrieval + citations)
+└─ Integrations (Stripe, Supabase, Redis)
+        ↓
+[ Supabase ]
+├─ Postgres (dados core)
+├─ Auth
+├─ Storage (assets, exports, docs)
+└─ RLS
+        + [ Redis (Upstash) ]
+        + [ Qdrant (Vector DB) ]
+````
+
+---
+
+# 6) STACK TECNOLÓGICA
+
+## 6.1 Frontend
+
+* Next.js 14+ (App Router)
+* React 18+
+* TypeScript
+* TailwindCSS
+* shadcn/ui + Radix
+* next-intl (PT-BR / EN-US)
+* PWA (manifest + SW)
+
+## 6.2 Backend
+
+* NestJS
+* Zod (contratos/validação no boundary)
+* OpenAPI/Swagger
+* Supabase Auth + JWT
+* Rate limit + cache (Redis/Upstash)
+* Stripe SDK
+* (Opcional P1+) Prisma ORM
+
+## 6.3 Dados & Infra
+
+* Supabase Postgres + Auth + Storage
+* Redis (Upstash)
+* Qdrant (Vector DB)
+* Deploy:
+
+  * Web: Vercel
+  * API: Railway / ECS
+  * DB/Auth/Storage: Supabase
+  * CDN: Vercel Edge / Cloudflare
+
+## 6.4 IA / RAG
+
+* LLM provider abstrato (OpenAI / Anthropic)
+* Embeddings provider abstrato
+* Retrieval governado (Qdrant)
+* Citation normalization / deterministic ids
+
+---
+
+# 7) DOMÍNIOS (DDD) / BOUNDED CONTEXTS
+
+1. **Identity** (Auth, Profiles, Roles, Plans)
+2. **Content** (Posts, Documents, Chunks, Tags, Feed)
+3. **Store** (Products, Orders, Entitlements, Coupons, Publishing)
+4. **Billing** (Subscriptions, invoices, webhooks)
+5. **Affiliates** (profiles, clicks, conversions, payouts)
+6. **AI** (Chat, Retrieval, Citations, Guardrails)
+7. **Training** (Anamnesis, Workouts, Exports)
+8. **Scanner** (Vision, Taxonomy, Equipment, Exercise mapping, Evidence)
+9. **Marketplace/Office** (mentorias, profissionais, contratos, reviews)
+10. **Admin/Governance** (approvals, moderation, costs, logs)
+11. **Tenancy** (B2B institutions, white-label, limits)
+
+---
+
+# 8) ROTAS DE FRONTEND (NEXT.JS)
+
+| Rota                | Descrição                    | Acesso                    |
+| ------------------- | ---------------------------- | ------------------------- |
+| `/`                 | Home + hero + feed           | público                   |
+| `/login`            | autenticação                 | público                   |
+| `/dashboard`        | painel usuário               | logado                    |
+| `/feed`             | feed técnico                 | público/assinante         |
+| `/chat`             | IA com citações              | logado (limite por plano) |
+| `/anamnese`         | formulário                   | logado                    |
+| `/prescrever`       | gerar/editar/exportar treino | logado (plano)            |
+| `/scanner`          | scanner de equipamentos      | logado (Pro+) / regra     |
+| `/loja`             | catálogo + checkout          | público/logado            |
+| `/produto/[slug]`   | detalhe produto              | público                   |
+| `/minha-biblioteca` | itens adquiridos             | logado                    |
+| `/fitversum-office` | marketplace de serviços      | público/logado            |
+| `/admin`            | visão geral admin            | admin                     |
+| `/admin/planos`     | gestão de planos             | admin                     |
+| `/admin/usuarios`   | gestão de usuários           | admin                     |
+| `/admin/fontes`     | documentos/fonte RAG         | admin                     |
+| `/admin/logs`       | logs e custos                | admin                     |
+| `/pricing`          | planos                       | público                   |
+| `/auth/callback`    | callback auth                | público                   |
+
+---
+
+# 9) API (NESTJS)
+
+## 9.1 Health
+
+```http
+GET /health
+```
+
+## 9.2 Auth / Users
+
+```http
+GET  /users/me
+PATCH /users/me
+GET  /users/:id                 (admin)
+```
+
+## 9.3 Content / Feed
+
+```http
+GET  /content/posts
+POST /content/posts             (admin/professional)
+GET  /content/posts/:id
+POST /content/documents/upload  (admin)
+POST /content/documents/:id/approve (admin)
+```
+
+## 9.4 AI
+
+```http
+POST /ai/chat-with-scientific-sources
+POST /ai/analyze-anamnesis
+POST /ai/generate-workout
+POST /ai/workout-support
+POST /ai/explain-exercises
+POST /ai/real-time-progress-tracking
+POST /ai/feedback-per-set
+POST /ai/work-out-session-analysis
+POST /ai/academic-support
+GET  /ai/academic-search
+GET  /ai/usage/me
+```
+
+## 9.5 Training
+
+```http
+POST /training/anamneses
+GET  /training/anamneses/:id
+POST /training/workouts/generate
+POST /training/workouts/:id/export/pdf
+POST /training/workouts/:id/export/docx
+POST /training/workouts/:id/edit/docx
+POST /training/workouts/:id/import/pdf
+POST /training/workouts/:id/send/pdf
+```
+
+## 9.6 Scanner
+
+```http
+POST /scanner/equipment
+```
+
+## 9.7 Store / Publishing
+
+```http
+GET  /store/products
+GET  /store/products/:slug
+POST /store/checkout/session
+POST /store/webhooks/stripe
+GET  /store/library
+GET  /store/download/:assetId
+POST /store/submit-products
+```
+
+## 9.8 Billing / Plans
+
+```http
+GET  /billing/plans
+GET  /billing/subscription/me
+POST /billing/subscription/portal
+POST /billing/webhooks/stripe
+```
+
+## 9.9 Affiliates
+
+```http
+POST /affiliates/enable
+GET  /affiliates/me
+POST /affiliates/link
+POST /affiliates/conversion
+GET  /affiliates/stats/me
+```
+
+## 9.10 Admin
+
+```http
+GET   /admin/planos
+PATCH /admin/planos
+GET   /admin/usuarios
+PATCH /admin/usuarios
+GET   /admin/fontes
+POST  /admin/fontes/upload
+PATCH /admin/fontes/:id
+GET   /admin/logs
+```
+
+---
+
+# 10) CONTRATOS TYPECRIPT (CORE)
+
+## 10.1 Roles, Plans, User Context
+
+```ts
+export type Role =
+  | "visitor"
+  | "student"
+  | "subscriber"
+  | "professional"
+  | "company"
+  | "affiliate"
+  | "admin";
+
+export type PlanTier =
+  | "free"
+  | "pro"
+  | "pro_plus"
+  | "university"
+  | "b2b";
+
+export interface AuthUserContext {
+  userId: string;
+  role: Role;
+  planTier: PlanTier;
+  institutionId?: string | null;
+  isFounder?: boolean;
+}
+```
+
+## 10.2 Chat / AI response
+
+```ts
+export interface AISource {
+  documentId: string;
+  title: string;
+  author?: string;
+  year?: number;
+  pageStart?: number;
+  pageEnd?: number;
+  chunkId: string;
+  score: number;
+  locator?: string;
+}
+
+export interface AIChatResponse {
+  answer: string;
+  sources: AISource[];
+  safety: {
+    ragUsed: boolean;
+    blocked: boolean;
+    reason?: string;
+  };
+  productSuggestion?: {
+    productId: string;
+    why: string;
+  };
+}
+```
+
+## 10.3 Scanner contracts
+
+```ts
+export interface ScannerRequest {
+  assetId: string;
+  goal?: string;
+  constraints?: string[];
+  level?: "beginner" | "intermediate" | "advanced";
+  userSelected?: {
+    equipId?: string;
+    exerciseFamily?: string;
+  };
+}
+
+export type ScannerStatus = "OK" | "FALLBACK";
+
+export interface ScannerCitation {
+  citationId: string;
+  title: string;
+  locator?: string;
+  quote?: string;
+}
+
+export interface ScannerResponse {
+  status: ScannerStatus;
+  equipmentName?: string;
+  equipId?: string;
+  compatibleExercises?: string[];
+  muscles?: {
+    primeMovers: string[];
+    synergists: string[];
+    stabilizers: string[];
+  };
+  evidence?: {
+    citations: ScannerCitation[];
+    snippets?: string[];
+  };
+  assumptions?: string[];
+  confidenceScore?: number;
+  scanId: string;
+  message?: string; // fallback message
+}
+```
+
+## 10.4 RAG Abstraction
+
+```ts
+export interface RetrievedChunk {
+  chunkId: string;
+  documentId: string;
+  title: string;
+  author?: string;
+  year?: number;
+  score: number;
+  content: string;
+  locator?: string;
+  pageStart?: number;
+  pageEnd?: number;
+}
+
+export interface RagRetrieveParams {
+  query: string;
+  topK?: number;
+  minScore?: number;
+  filters?: Record<string, unknown>;
+}
+
+export interface RagAdapter {
+  retrieve(params: RagRetrieveParams): Promise<RetrievedChunk[]>;
+}
+
+export interface AIProvider {
+  embed(text: string): Promise<number[]>;
+  generate(input: {
+    prompt: string;
+    context: { content: string; meta: Record<string, any> }[];
+  }): Promise<{ text: string }>;
+}
+```
+
+---
+
+# 11) BANCO DE DADOS — MODELO CONCEITUAL (SUPABASE / POSTGRES)
+
+## 11.1 Entidades principais
+
+* profiles (usuário/perfil)
+* plan_definitions
+* subscriptions
+* usage_counters_monthly
+* posts
+* products
+* product_assets
+* orders / order_items
+* entitlements
+* affiliate_profiles / clicks / conversions
+* documents / chunks
+* ai_logs
+* anamneses
+* workouts / workout_exports
+* scanner_log
+* equipment / equipment_alias / taxonomy_version
+* exercise / equipment_exercise / exercise_muscle
+* institutions / institution_members
+* mentorship_profiles / services (P1+)
+* admin_audit_logs
+
+---
+
+# 12) SQL BOOTSTRAP (MIGRATIONS)
+
+> Ordem recomendada das migrations (ajuste conforme seu repositório):
+
+```txt
+001_init_core.sql
+002_scanner_p0.sql
+003_plans_affiliates_multitenant.sql
+004_security_rls_ext.sql
+005_seed_fitversum.sql
+006_v4_exercises_catalog.sql
+007_v4_seed_exercises_catalog.sql
+008_v4_affiliate_rls.sql
+009_v5_billing_store_entitlements.sql
+010_v5_ai_logs_usage.sql
+011_v5_admin_indexes.sql
+```
+
+## 12.1 Exemplo — Core Profiles + Plans + Usage (trecho)
+
+```sql
+create extension if not exists pgcrypto;
+
+create table if not exists public.profiles (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  name text,
+  role text not null default 'student',
+  plan_tier text not null default 'free',
+  profession text,
+  bio text,
+  locale text default 'pt-BR',
+  institution_id uuid null,
+  affiliate_enabled boolean not null default false,
+  is_founder boolean not null default false,
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+
+create table if not exists public.plan_definitions (
+  id uuid primary key default gen_random_uuid(),
+  plan_tier text unique not null,
+  display_name text not null,
+  monthly_price_cents int not null default 0,
+  annual_price_cents int,
+  ai_monthly_messages int,
+  workout_prescriptions_monthly int,
+  max_students int,
+  scanner_enabled boolean not null default false,
+  forum_enabled boolean not null default false,
+  white_label_enabled boolean not null default false,
+  commission_exempt boolean not null default false,
+  is_active boolean not null default true,
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+
+create table if not exists public.usage_counters_monthly (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  period_ym text not null, -- YYYY-MM
+  ai_messages_count int not null default 0,
+  workout_generations_count int not null default 0,
+  scanner_scans_count int not null default 0,
+  created_at timestamptz default now(),
+  updated_at timestamptz default now(),
+  unique (user_id, period_ym)
+);
+```
+
+## 12.2 Exemplo — Store / Orders / Entitlements
+
+```sql
+create table if not exists public.products (
+  id uuid primary key default gen_random_uuid(),
+  owner_user_id uuid references auth.users(id),
+  slug text unique not null,
+  title text not null,
+  description text,
+  product_type text not null default 'ebook', -- ebook/article/course/program/box
+  price_cents int not null,
+  compare_at_price_cents int,
+  currency text not null default 'BRL',
+  visibility_rank int not null default 100, -- founder/pro+/pro/free ordering support
+  is_active boolean not null default true,
+  is_founder_product boolean not null default false,
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+
+create table if not exists public.product_assets (
+  id uuid primary key default gen_random_uuid(),
+  product_id uuid not null references public.products(id) on delete cascade,
+  storage_path text not null,
+  mime_type text,
+  file_name text,
+  protected_download boolean not null default true,
+  created_at timestamptz default now()
+);
+
+create table if not exists public.orders (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references auth.users(id),
+  status text not null default 'pending', -- pending/paid/failed/refunded
+  provider text not null default 'stripe',
+  provider_ref text,
+  total_cents int not null default 0,
+  currency text not null default 'BRL',
+  affiliate_click_ref text,
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+
+create table if not exists public.order_items (
+  id uuid primary key default gen_random_uuid(),
+  order_id uuid not null references public.orders(id) on delete cascade,
+  product_id uuid not null references public.products(id),
+  seller_user_id uuid references auth.users(id),
+  price_cents int not null,
+  commission_cents int not null default 0,
+  royalty_cents int not null default 0,
+  created_at timestamptz default now()
+);
+
+create table if not exists public.entitlements (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  product_id uuid not null references public.products(id) on delete cascade,
+  order_id uuid references public.orders(id) on delete set null,
+  granted_at timestamptz default now(),
+  revoked_at timestamptz null,
+  unique (user_id, product_id, order_id)
+);
+```
+
+## 12.3 Exemplo — Affiliates (trecho)
+
+```sql
+create table if not exists public.affiliate_profiles (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid unique not null references auth.users(id) on delete cascade,
+  affiliate_code text unique not null,
+  commission_rate_bp int not null default 5000, -- 50%
+  is_active boolean not null default true,
+  created_at timestamptz default now()
+);
+
+create table if not exists public.affiliate_clicks (
+  id uuid primary key default gen_random_uuid(),
+  affiliate_profile_id uuid not null references public.affiliate_profiles(id) on delete cascade,
+  target_type text not null, -- plan|product|service
+  target_id text not null,
+  click_ref text unique not null,
+  created_at timestamptz default now()
+);
+
+create table if not exists public.affiliate_conversions (
+  id uuid primary key default gen_random_uuid(),
+  affiliate_profile_id uuid not null references public.affiliate_profiles(id) on delete cascade,
+  order_id uuid null references public.orders(id) on delete set null,
+  subscription_id text null,
+  gross_amount_cents int not null,
+  commission_amount_cents int not null,
+  status text not null default 'pending', -- pending|approved|paid|rejected
+  created_at timestamptz default now()
+);
+```
+
+## 12.4 Exemplo — Scanner / Taxonomia / Exercícios (trecho)
+
+```sql
+create table if not exists public.taxonomy_version (
+  id uuid primary key default gen_random_uuid(),
+  version text unique not null,
+  notes text,
+  created_at timestamptz default now()
+);
+
+create table if not exists public.equipment (
+  id uuid primary key default gen_random_uuid(),
+  equip_id text unique not null, -- canonical id ex: smith_machine
+  equipment_name text not null,
+  is_active boolean not null default true,
+  taxonomy_version_id uuid references public.taxonomy_version(id),
+  created_at timestamptz default now()
+);
+
+create table if not exists public.equipment_alias (
+  id uuid primary key default gen_random_uuid(),
+  equipment_id uuid not null references public.equipment(id) on delete cascade,
+  alias_label text not null,
+  weight numeric not null default 1.0,
+  unique (equipment_id, alias_label)
+);
+
+create table if not exists public.exercise (
+  id uuid primary key default gen_random_uuid(),
+  slug text unique not null,
+  name text not null,
+  exercise_family text,
+  is_active boolean not null default true,
+  created_at timestamptz default now()
+);
+
+create table if not exists public.equipment_exercise (
+  id uuid primary key default gen_random_uuid(),
+  equipment_id uuid not null references public.equipment(id) on delete cascade,
+  exercise_id uuid not null references public.exercise(id) on delete cascade,
+  sort_order int not null default 100,
+  is_contraindicated boolean not null default false,
+  notes text,
+  unique (equipment_id, exercise_id)
+);
+
+create table if not exists public.exercise_muscle (
+  id uuid primary key default gen_random_uuid(),
+  exercise_id uuid not null references public.exercise(id) on delete cascade,
+  muscle_name text not null,
+  role_type text not null, -- prime_mover|synergist|stabilizer
+  unique (exercise_id, muscle_name, role_type)
+);
+
+create table if not exists public.scanner_log (
+  id uuid primary key default gen_random_uuid(),
+  scan_id text unique not null,
+  user_id uuid references auth.users(id),
+  asset_id text,
+  status text not null, -- OK|FALLBACK
+  equip_id text,
+  confidence_score numeric,
+  reason text,
+  payload_summary jsonb not null default '{}'::jsonb,
+  created_at timestamptz default now()
+);
+```
+
+## 12.5 Exemplo — RAG core (documents/chunks)
+
+```sql
+create table if not exists public.documents (
+  id uuid primary key default gen_random_uuid(),
+  title text not null,
+  doc_type text not null,
+  source_type text not null default 'primary', -- primary|secondary|tertiary
+  author text,
+  year int,
+  approved boolean not null default false,
+  storage_path text,
+  created_at timestamptz default now()
+);
+
+create table if not exists public.chunks (
+  id uuid primary key default gen_random_uuid(),
+  document_id uuid not null references public.documents(id) on delete cascade,
+  content text not null,
+  meta jsonb not null default '{}'::jsonb,
+  embedding_id text,
+  created_at timestamptz default now()
+);
+
+create index if not exists chunks_document_idx on public.chunks(document_id);
+```
+
+---
+
+# 13) RLS (ROW LEVEL SECURITY) — POLÍTICA MÍNIMA CONSOLIDADA
+
+## 13.1 Ativar RLS em tabelas sensíveis
+
+```sql
+alter table public.anamneses enable row level security;
+alter table public.workouts enable row level security;
+alter table public.entitlements enable row level security;
+alter table public.usage_counters_monthly enable row level security;
+alter table public.affiliate_clicks enable row level security;
+alter table public.affiliate_conversions enable row level security;
+```
+
+## 13.2 Políticas exemplo
+
+```sql
+create policy "anamneses_own_select"
+on public.anamneses for select
+using (auth.uid() = user_id);
+
+create policy "workouts_own_select"
+on public.workouts for select
+using (auth.uid() = user_id);
+
+create policy "entitlements_own_select"
+on public.entitlements for select
+using (auth.uid() = user_id);
+
+create policy "usage_own_select"
+on public.usage_counters_monthly for select
+using (auth.uid() = user_id);
+
+create policy "affiliate_clicks_own_select"
+on public.affiliate_clicks for select
+using (
+  affiliate_profile_id in (
+    select id from public.affiliate_profiles where user_id = auth.uid()
+  )
+);
+
+create policy "affiliate_conversions_own_select"
+on public.affiliate_conversions for select
+using (
+  affiliate_profile_id in (
+    select id from public.affiliate_profiles where user_id = auth.uid()
+  )
+);
+```
+
+> Observação operacional:
+>
+> * Rotinas administrativas (webhook, aprovação, indexação) usam **Service Role** no backend.
+> * Endpoints de usuário preferem contexto JWT e RLS.
+
+---
+
+# 14) RAG — ARQUITETURA GOVERNADA (CORE)
+
+## 14.1 Objetivo
+
+Responder **somente** com base em fontes aprovadas quando a pergunta exigir evidência científica.
+
+## 14.2 Pipeline
+
+1. Upload documento (admin)
+2. Parsing / extração
+3. Chunking semântico
+4. Embeddings
+5. Indexação vetorial (Qdrant)
+6. Query → retrieve topK
+7. Re-rank / dedup / gate
+8. LLM (com contexto)
+9. Normalização de citações
+10. Fallback se gate falhar
+
+## 14.3 Regra de ouro
+
+Se não houver chunks relevantes acima do threshold:
+
+* responder **“não encontrei base suficiente nas fontes aprovadas”**
+* sugerir refinamento ou conteúdo da loja
+
+## 14.4 Regras da IA
+
+* Fonte primária: conteúdo do autor aprovado
+* Fonte secundária: periódicos autorizados/indexados
+* Fonte terciária: internet aberta apenas para busca acadêmica específica (quando explicitamente permitido pelo produto)
+
+---
+
+# 15) FITSCANNER — PRD TÉCNICO CONSOLIDADO
+
+## 15.1 Regra de ouro (scanner)
+
+1. Sem evidência suficiente → **não orientar**
+2. Citações apenas de fontes aprovadas
+3. Hard-stop em baixa confiança (imagem/vision/gate)
+4. Auditoria com `scan_id`
+
+## 15.2 Pipeline P0/P1
+
+```txt
+Upload
+ → Vision Provider (top-k)
+ → Normalização label→equip_id
+ → Desambiguação (chips 3–8)
+ → Catálogo determinístico (exercícios + músculos)
+ → RAG governado (equip_id + goal + constraints)
+ → Resposta estruturada (citations + confidence + scan_id)
+ → Fallback seguro (se necessário)
+```
+
+## 15.3 KPIs (P0)
+
+* Top-1 equip_id ≥ 70%
+* Top-3 ≥ 85%
+* p95 <= 2.5s (sem LLM)
+* Gate pass rate >= 60% (com corpus seedado)
+* fallback rate controlado
+
+## 15.4 Escopo P0
+
+* Endpoint `/scanner/equipment`
+* Taxonomia governada
+* Catálogo de exercícios e músculos
+* RAG gate
+* scanner_log
+* UI mínima com upload + chips + resultado
+
+---
+
+# 16) MONOREPO — ESTRUTURA (V5)
+
+```txt
+fitversum-lab/
+  apps/
+    web/                      # Next.js (App Router + PWA)
+    api/                      # NestJS API
+  packages/
+    contracts/                # types shared + zod DTOs
+    ui/                       # componentes compartilhados
+    config/                   # tsconfig/eslint/prettier
+  infra/
+    supabase/
+      migrations/
+      seeds/
+      policies/
+    qdrant/
+      collections/
+    redis/
+      scripts/
+  docs/
+    SPEC.md
+    PRD_SCANNER.md
+    BACKLOG.md
+  scripts/
+    create-fitversum-v5.js
+    seed-dev.ts
+  .env.example
+  package.json
+  turbo.json
+  pnpm-workspace.yaml
+```
+
+---
+
+# 17) BOOTSTRAP DO REPOSITÓRIO (PACKAGE / WORKSPACE)
+
+## 17.1 `package.json` (root)
+
+```json
+{
+  "name": "fitversum-lab",
+  "private": true,
+  "version": "5.0.0",
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api start:dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "prettier": "^3.4.0",
+    "typescript": "^5.7.0"
+  }
+}
+```
+
+## 17.2 `pnpm-workspace.yaml`
+
+```yaml
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "infra/*"
+  - "scripts"
+```
+
+## 17.3 `turbo.json`
+
+```json
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "dev": { "cache": false, "persistent": true },
+    "build": { "dependsOn": ["^build"], "outputs": ["dist/**", ".next/**"] },
+    "lint": {},
+    "typecheck": {}
+  }
+}
+```
+
+---
+
+# 18) `.env.example`
+
+```env
+# ===== APP =====
+NODE_ENV=development
+NEXT_PUBLIC_APP_NAME=Fitversum Lab
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:4000
+
+# ===== SUPABASE (WEB PUBLIC) =====
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+
+# ===== SUPABASE (API SERVER) =====
+SUPABASE_URL=
+SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+
+# ===== DB / OPTIONAL DIRECT URL =====
+DATABASE_URL=
+
+# ===== REDIS / UPSTASH =====
+REDIS_URL=
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
+
+# ===== QDRANT =====
+QDRANT_URL=
+QDRANT_API_KEY=
+
+# ===== AI =====
+AI_PROVIDER=openai
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+RAG_MIN_SCORE=0.72
+RAG_MIN_DOCS=1
+RAG_MIN_HITS=2
+RAG_TOPK=6
+FEATURE_RAG_PROVIDER=stub
+
+# ===== SCANNER =====
+FEATURE_SCANNER_PROVIDER=stub
+SCANNER_IMAGE_QUALITY_MIN=0.60
+SCANNER_VISION_CONF_MIN=0.60
+SCANNER_TOP1_TOP2_DELTA_MIN=0.10
+
+# ===== STRIPE =====
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+
+# ===== PAYPAL (OPTIONAL) =====
+PAYPAL_CLIENT_ID=
+PAYPAL_SECRET=
+
+# ===== APP/SECURITY =====
+CORS_ORIGIN=http://localhost:3000
+JWT_AUDIENCE=authenticated
+LOG_LEVEL=debug
+
+# ===== STORAGE / EXPORTS =====
+SUPABASE_BUCKET_ASSETS=assets
+SUPABASE_BUCKET_EXPORTS=exports
+SUPABASE_BUCKET_DOCS=docs
+```
+
+---
+
+# 19) NEXT.JS (WEB) — BOOTSTRAP ESSENCIAL
+
+## 19.1 `apps/web/package.json`
+
+```json
+{
+  "name": "web",
+  "private": true,
+  "version": "5.0.0",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.47.0",
+    "@stripe/stripe-js": "^4.6.0",
+    "next": "14.2.20",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "typescript": "^5.7.2"
+  }
+}
+```
+
+## 19.2 `apps/web/src/lib/supabase/client.ts`
+
+```ts
+import { createBrowserClient } from "@supabase/ssr";
+
+export function createClient() {
+  return createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
+}
+```
+
+## 19.3 `apps/web/src/lib/supabase/server.ts`
+
+```ts
+import { createServerClient } from "@supabase/ssr";
+import { cookies } from "next/headers";
+
+export function createServerSupabaseClient() {
+  const cookieStore = cookies();
+
+  return createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        get(name: string) {
+          return cookieStore.get(name)?.value;
+        },
+        set(name: string, value: string, options: any) {
+          cookieStore.set({ name, value, ...options });
+        },
+        remove(name: string, options: any) {
+          cookieStore.set({ name, value: "", ...options });
+        }
+      }
+    }
+  );
+}
+```
+
+## 19.4 `apps/web/src/middleware.ts` (gating por sessão/plano/role)
+
+```ts
+import { NextResponse, type NextRequest } from "next/server";
+import { createServerClient } from "@supabase/ssr";
+
+type RouteRule = {
+  prefix: string;
+  auth?: boolean;
+  allowedPlans?: string[];
+  allowedRoles?: string[];
+};
+
+const ROUTE_RULES: RouteRule[] = [
+  { prefix: "/dashboard", auth: true },
+  { prefix: "/chat", auth: true, allowedPlans: ["free", "pro", "pro_plus", "b2b", "university"] },
+  { prefix: "/prescrever", auth: true, allowedPlans: ["pro", "pro_plus", "b2b", "university"] },
+  { prefix: "/scanner", auth: true, allowedPlans: ["pro", "pro_plus", "b2b", "university"] },
+  { prefix: "/admin", auth: true, allowedRoles: ["admin"] }
+];
+
+function matchRule(pathname: string) {
+  return ROUTE_RULES.find((r) => pathname.startsWith(r.prefix));
+}
+
+export async function middleware(req: NextRequest) {
+  const res = NextResponse.next();
+  const pathname = req.nextUrl.pathname;
+  const rule = matchRule(pathname);
+  if (!rule) return res;
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        get(name: string) {
+          return req.cookies.get(name)?.value;
+        },
+        set(name: string, value: string, options: any) {
+          res.cookies.set({ name, value, ...options });
+        },
+        remove(name: string, value: string, options: any) {
+          res.cookies.set({ name, value: "", ...options });
+        }
+      }
+    }
+  );
+
+  const { data: auth } = await supabase.auth.getUser();
+  const user = auth.user;
+
+  if (rule.auth && !user) {
+    const url = req.nextUrl.clone();
+    url.pathname = "/login";
+    url.searchParams.set("next", pathname);
+    return NextResponse.redirect(url);
+  }
+
+  if (!user) return res;
+
+  if (rule.allowedPlans || rule.allowedRoles) {
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("role, plan_tier")
+      .eq("user_id", user.id)
+      .single();
+
+    const role = profile?.role ?? "student";
+    const planTier = profile?.plan_tier ?? "free";
+
+    if (rule.allowedRoles && !rule.allowedRoles.includes(role)) {
+      return NextResponse.redirect(new URL("/dashboard?forbidden=role", req.url));
+    }
+
+    if (rule.allowedPlans && !rule.allowedPlans.includes(planTier)) {
+      return NextResponse.redirect(new URL("/pricing?forbidden=plan", req.url));
+    }
+  }
+
+  return res;
+}
+
+export const config = {
+  matcher: ["/dashboard/:path*", "/chat/:path*", "/prescrever/:path*", "/scanner/:path*", "/admin/:path*"]
+};
+```
+
+## 19.5 `apps/web/src/app/login/page.tsx`
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import { createClient } from "@/lib/supabase/client";
+
+export default function LoginPage() {
+  const supabase = createClient();
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState<string | null>(null);
+
+  async function signInWithGoogle() {
+    setLoading("google");
+    setMessage("");
+    const origin = window.location.origin;
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: { redirectTo: `${origin}/auth/callback` }
+    });
+    if (error) setMessage(error.message);
+    setLoading(null);
+  }
+
+  async function signInWithMagicLink(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading("email");
+    setMessage("");
+    const origin = window.location.origin;
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: { emailRedirectTo: `${origin}/auth/callback` }
+    });
+    if (error) setMessage(error.message);
+    else setMessage("Link mágico enviado.");
+    setLoading(null);
+  }
+
+  return (
+    <main className="mx-auto max-w-lg p-6">
+      <h1 className="text-2xl font-bold">Entrar</h1>
+      <div className="mt-4 space-y-4 rounded-xl border p-4">
+        <button onClick={signInWithGoogle} className="w-full rounded border px-3 py-2">
+          {loading === "google" ? "Conectando..." : "Entrar com Google"}
+        </button>
+
+        <form onSubmit={signInWithMagicLink} className="space-y-2">
+          <input
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full rounded border px-3 py-2"
+            placeholder="seu@email.com"
+          />
+          <button className="w-full rounded border px-3 py-2">
+            {loading === "email" ? "Enviando..." : "Receber link mágico"}
+          </button>
+        </form>
+
+        {message && <p className="text-sm">{message}</p>}
+      </div>
+    </main>
+  );
+}
+```
+
+## 19.6 `apps/web/src/app/auth/callback/route.ts`
+
+```ts
+import { NextResponse } from "next/server";
+import { createServerClient } from "@supabase/ssr";
+import { cookies } from "next/headers";
+
+export async function GET(req: Request) {
+  const url = new URL(req.url);
+  const code = url.searchParams.get("code");
+  const next = url.searchParams.get("next") ?? "/dashboard";
+
+  const cookieStore = cookies();
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        get(name: string) {
+          return cookieStore.get(name)?.value;
+        },
+        set(name: string, value: string, options: any) {
+          cookieStore.set({ name, value, ...options });
+        },
+        remove(name: string, options: any) {
+          cookieStore.set({ name, value: "", ...options });
+        }
+      }
+    }
+  );
+
+  if (code) {
+    await supabase.auth.exchangeCodeForSession(code);
+
+    const { data: auth } = await supabase.auth.getUser();
+    if (auth.user) {
+      await supabase.from("profiles").upsert(
+        {
+          user_id: auth.user.id,
+          name: auth.user.user_metadata?.full_name ?? auth.user.email ?? "Usuário",
+          role: "student",
+          plan_tier: "free",
+          locale: "pt-BR"
+        },
+        { onConflict: "user_id" }
+      );
+    }
+  }
+
+  return NextResponse.redirect(new URL(next, url.origin));
+}
+```
+
+## 19.7 `apps/web/src/app/api/affiliate/click/route.ts`
+
+```ts
+import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+
+export async function GET(req: Request) {
+  const url = new URL(req.url);
+  const aff = url.searchParams.get("aff");
+  const ref = url.searchParams.get("ref");
+  const targetType = url.searchParams.get("targetType");
+  const targetId = url.searchParams.get("targetId");
+  const next = url.searchParams.get("next") || "/";
+
+  if (aff) cookies().set("fv_aff", aff, { path: "/", maxAge: 60 * 60 * 24 * 30 });
+  if (ref) cookies().set("fv_aff_ref", ref, { path: "/", maxAge: 60 * 60 * 24 * 30 });
+  if (targetType) cookies().set("fv_aff_target_type", targetType, { path: "/", maxAge: 60 * 60 * 24 * 7 });
+  if (targetId) cookies().set("fv_aff_target_id", targetId, { path: "/", maxAge: 60 * 60 * 24 * 7 });
+
+  return NextResponse.redirect(new URL(next, url.origin));
+}
+```
+
+---
+
+# 20) STRIPE (NEXT APP ROUTER) — IMPLEMENTAÇÃO BASE V5
+
+## 20.1 `apps/web/src/lib/stripe.ts`
+
+```ts
+import Stripe from "stripe";
+
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: "2024-06-20"
+});
+```
+
+## 20.2 `apps/web/src/app/api/stripe/checkout/route.ts`
+
+```ts
+import { NextResponse } from "next/server";
+import { stripe } from "@/lib/stripe";
+import { cookies } from "next/headers";
+import { createServerSupabaseClient } from "@/lib/supabase/server";
+
+export async function POST(req: Request) {
+  const body = await req.json();
+  const { priceId, mode = "subscription", successPath = "/dashboard", cancelPath = "/pricing" } = body;
+
+  const supabase = createServerSupabaseClient();
+  const { data: auth } = await supabase.auth.getUser();
+
+  if (!auth.user) {
+    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  }
+
+  const cookieStore = cookies();
+  const affiliateClickRef = cookieStore.get("fv_aff_ref")?.value ?? null;
+
+  const session = await stripe.checkout.sessions.create({
+    mode,
+    customer_email: auth.user.email,
+    line_items: [{ price: priceId, quantity: 1 }],
+    success_url: `${process.env.NEXT_PUBLIC_APP_URL}${successPath}`,
+    cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}${cancelPath}`,
+    metadata: {
+      user_id: auth.user.id,
+      ...(affiliateClickRef ? { affiliate_click_ref: affiliateClickRef } : {})
+    }
+  });
+
+  return NextResponse.json({ url: session.url });
+}
+```
+
+## 20.3 `apps/web/src/app/api/stripe/webhook/route.ts`
+
+```ts
+import { headers } from "next/headers";
+import { NextResponse } from "next/server";
+import { stripe } from "@/lib/stripe";
+
+export async function POST(req: Request) {
+  const body = await req.text();
+  const sig = headers().get("stripe-signature");
+  if (!sig) return new NextResponse("Missing stripe-signature", { status: 400 });
+
+  let event: any;
+  try {
+    event = stripe.webhooks.constructEvent(
+      body,
+      sig,
+      process.env.STRIPE_WEBHOOK_SECRET!
+    );
+  } catch (err: any) {
+    return new NextResponse(`Webhook Error: ${err.message}`, { status: 400 });
+  }
+
+  switch (event.type) {
+    case "checkout.session.completed": {
+      const session = event.data.object as any;
+      const affiliateClickRef = session.metadata?.affiliate_click_ref ?? null;
+
+      // TODO:
+      // 1) persistir order/subscription no backend
+      // 2) criar entitlements
+      // 3) atualizar planTier/profile
+      // 4) registrar conversão afiliado
+
+      if (affiliateClickRef) {
+        try {
+          await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000"}/affiliates/conversion`, {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({
+              clickRef: affiliateClickRef,
+              subscriptionId: session.subscription ?? null,
+              grossAmountCents: session.amount_total ?? 0
+            })
+          });
+        } catch {}
+      }
+      break;
+    }
+
+    case "customer.subscription.updated":
+    case "customer.subscription.deleted":
+    case "invoice.payment_failed":
+      // TODO: sincronizar status de assinatura/limites
+      break;
+  }
+
+  return NextResponse.json({ received: true });
+}
+```
+
+---
+
+# 21) NESTJS API — BOOTSTRAP (V5)
+
+## 21.1 `apps/api/package.json`
+
+```json
+{
+  "name": "api",
+  "private": true,
+  "version": "5.0.0",
+  "scripts": {
+    "start:dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.4.9",
+    "@nestjs/core": "^10.4.9",
+    "@nestjs/platform-express": "^10.4.9",
+    "@nestjs/swagger": "^8.1.0",
+    "@supabase/supabase-js": "^2.47.0",
+    "@upstash/redis": "^1.34.3",
+    "@qdrant/js-client-rest": "^1.13.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.4.8",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
+```
+
+## 21.2 `apps/api/src/main.ts`
+
+```ts
+import { NestFactory } from "@nestjs/core";
+import { ValidationPipe } from "@nestjs/common";
+import { AppModule } from "./app.module";
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule, { cors: true });
+
+  app.enableCors({
+    origin: process.env.CORS_ORIGIN?.split(",") ?? ["http://localhost:3000"],
+    credentials: true
+  });
+
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      transform: true,
+      forbidUnknownValues: false
+    })
+  );
+
+  const port = Number(process.env.PORT ?? 4000);
+  await app.listen(port);
+
+  console.log(`✅ API running at http://localhost:${port}`);
+}
+bootstrap();
+```
+
+## 21.3 `apps/api/src/app.module.ts`
+
+```ts
+import { Module } from "@nestjs/common";
+import { HealthModule } from "./modules/health/health.module";
+import { AiModule } from "./modules/ai/ai.module";
+import { ScannerModule } from "./modules/scanner/scanner.module";
+import { StoreModule } from "./modules/store/store.module";
+import { TrainingModule } from "./modules/training/training.module";
+import { ContentModule } from "./modules/content/content.module";
+import { AdminModule } from "./modules/admin/admin.module";
+import { AffiliatesModule } from "./modules/affiliates/affiliates.module";
+import { BillingModule } from "./modules/billing/billing.module";
+
+@Module({
+  imports: [
+    HealthModule,
+    AiModule,
+    ScannerModule,
+    StoreModule,
+    TrainingModule,
+    ContentModule,
+    AdminModule,
+    AffiliatesModule,
+    BillingModule
+  ]
+})
+export class AppModule {}
+```
+
+---
+
+# 22) NESTJS — GUARDS / DECORATORS (AUTH / ROLES / PLANS)
+
+## 22.1 `CurrentUser` decorator
+
+```ts
+import { createParamDecorator, ExecutionContext } from "@nestjs/common";
+import type { AuthUserContext } from "@fitversum/contracts";
+
+export const CurrentUser = createParamDecorator(
+  (_: unknown, ctx: ExecutionContext): AuthUserContext => {
+    const req = ctx.switchToHttp().getRequest();
+    return req.user;
+  }
+);
+```
+
+## 22.2 `Roles` / `Plans` decorators
+
+```ts
+import { SetMetadata } from "@nestjs/common";
+
+export const ROLES_KEY = "roles";
+export const Roles = (...roles: string[]) => SetMetadata(ROLES_KEY, roles);
+
+export const PLANS_KEY = "plans";
+export const Plans = (...plans: string[]) => SetMetadata(PLANS_KEY, plans);
+```
+
+## 22.3 `AuthGuard` (stub com Supabase JWT)
+
+```ts
+import { CanActivate, ExecutionContext, Injectable, UnauthorizedException } from "@nestjs/common";
+import { getSupabaseAdmin } from "../../lib/supabase/supabase-admin";
+
+@Injectable()
+export class AuthGuard implements CanActivate {
+  async canActivate(ctx: ExecutionContext): Promise<boolean> {
+    const req = ctx.switchToHttp().getRequest();
+    const authHeader = req.headers.authorization as string | undefined;
+
+    if (!authHeader?.startsWith("Bearer ")) throw new UnauthorizedException("Missing bearer token");
+    const token = authHeader.slice("Bearer ".length);
+
+    const supabase = getSupabaseAdmin();
+    const { data, error } = await supabase.auth.getUser(token);
+    if (error || !data.user) throw new UnauthorizedException("Invalid token");
+
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("role, plan_tier, institution_id, is_founder")
+      .eq("user_id", data.user.id)
+      .single();
+
+    req.user = {
+      userId: data.user.id,
+      role: profile?.role ?? "student",
+      planTier: profile?.plan_tier ?? "free",
+      institutionId: profile?.institution_id ?? null,
+      isFounder: profile?.is_founder ?? false
+    };
+
+    return true;
+  }
+}
+```
+
+## 22.4 `RolesGuard` / `PlansGuard`
+
+```ts
+import { CanActivate, ExecutionContext, ForbiddenException, Injectable } from "@nestjs/common";
+import { Reflector } from "@nestjs/core";
+import { ROLES_KEY } from "../decorators/roles.decorator";
+import { PLANS_KEY } from "../decorators/plans.decorator";
+
+@Injectable()
+export class RolesGuard implements CanActivate {
+  constructor(private reflector: Reflector) {}
+  canActivate(ctx: ExecutionContext): boolean {
+    const roles = this.reflector.getAllAndOverride<string[]>(ROLES_KEY, [
+      ctx.getHandler(),
+      ctx.getClass()
+    ]);
+    if (!roles?.length) return true;
+
+    const req = ctx.switchToHttp().getRequest();
+    if (!roles.includes(req.user?.role)) {
+      throw new ForbiddenException("Role not allowed");
+    }
+    return true;
+  }
+}
+
+@Injectable()
+export class PlansGuard implements CanActivate {
+  constructor(private reflector: Reflector) {}
+  canActivate(ctx: ExecutionContext): boolean {
+    const plans = this.reflector.getAllAndOverride<string[]>(PLANS_KEY, [
+      ctx.getHandler(),
+      ctx.getClass()
+    ]);
+    if (!plans?.length) return true;
+
+    const req = ctx.switchToHttp().getRequest();
+    if (!plans.includes(req.user?.planTier)) {
+      throw new ForbiddenException("Plan not allowed");
+    }
+    return true;
+  }
+}
+```
+
+---
+
+# 23) SUPABASE ADMIN CLIENT (API)
+
+## 23.1 `apps/api/src/lib/supabase/supabase-admin.ts`
+
+```ts
+import { createClient } from "@supabase/supabase-js";
+
+let _client: ReturnType<typeof createClient> | null = null;
+
+export function getSupabaseAdmin() {
+  if (_client) return _client;
+
+  _client = createClient(
+    process.env.SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    { auth: { persistSession: false } }
+  );
+
+  return _client;
+}
+```
+
+---
+
+# 24) PLAN LIMITS + QUOTAS (V5)
+
+## 24.1 `apps/api/src/lib/plan/plan-limits.ts`
+
+```ts
+import type { PlanTier } from "@fitversum/contracts";
+
+export const PLAN_LIMITS: Record<PlanTier, {
+  aiMonthlyMessages: number | null;
+  workoutPrescriptionsMonthly: number | null;
+  maxStudents: number | null;
+  scannerEnabled: boolean;
+  commissionExempt?: boolean;
+}> = {
+  free: {
+    aiMonthlyMessages: 5,
+    workoutPrescriptionsMonthly: 0,
+    maxStudents: 0,
+    scannerEnabled: false,
+    commissionExempt: false
+  },
+  pro: {
+    aiMonthlyMessages: null, // ilimitado operacional (fair-use opcional)
+    workoutPrescriptionsMonthly: 5,
+    maxStudents: 5,
+    scannerEnabled: true,
+    commissionExempt: false
+  },
+  pro_plus: {
+    aiMonthlyMessages: null,
+    workoutPrescriptionsMonthly: null,
+    maxStudents: null,
+    scannerEnabled: true,
+    commissionExempt: true
+  },
+  university: {
+    aiMonthlyMessages: null,
+    workoutPrescriptionsMonthly: null,
+    maxStudents: null,
+    scannerEnabled: true,
+    commissionExempt: true
+  },
+  b2b: {
+    aiMonthlyMessages: null,
+    workoutPrescriptionsMonthly: null,
+    maxStudents: null,
+    scannerEnabled: true,
+    commissionExempt: true
+  }
+};
+```
+
+## 24.2 `apps/api/src/lib/usage/usage.service.ts`
+
+```ts
+import { ForbiddenException, Injectable } from "@nestjs/common";
+import type { AuthUserContext } from "@fitversum/contracts";
+import { getSupabaseAdmin } from "../supabase/supabase-admin";
+import { PLAN_LIMITS } from "../plan/plan-limits";
+
+type UsageKey = "ai_messages_count" | "workout_generations_count" | "scanner_scans_count";
+
+@Injectable()
+export class UsageService {
+  private getPeriodYM(date = new Date()) {
+    const y = date.getUTCFullYear();
+    const m = String(date.getUTCMonth() + 1).padStart(2, "0");
+    return `${y}-${m}`;
+  }
+
+  private getLimitForKey(user: AuthUserContext, key: UsageKey): number | null {
+    const plan = PLAN_LIMITS[user.planTier];
+    if (!plan) return null;
+
+    if (key === "ai_messages_count") return plan.aiMonthlyMessages;
+    if (key === "workout_generations_count") return plan.workoutPrescriptionsMonthly;
+    if (key === "scanner_scans_count") return plan.scannerEnabled ? null : 0;
+
+    return null;
+  }
+
+  async assertAndIncrement(user: AuthUserContext, key: UsageKey, increment = 1) {
+    const supabase = getSupabaseAdmin();
+    const periodYM = this.getPeriodYM();
+
+    const { data: row, error } = await supabase
+      .from("usage_counters_monthly")
+      .select("*")
+      .eq("user_id", user.userId)
+      .eq("period_ym", periodYM)
+      .maybeSingle();
+
+    if (error) throw new Error(error.message);
+
+    const currentRow =
+      row ??
+      (await supabase
+        .from("usage_counters_monthly")
+        .insert({ user_id: user.userId, period_ym: periodYM })
+        .select("*")
+        .single()).data;
+
+    const current = Number(currentRow?.[key] ?? 0);
+    const limit = this.getLimitForKey(user, key);
+
+    if (limit !== null && current + increment > limit) {
+      throw new ForbiddenException({
+        code: "quota_exceeded",
+        metric: key,
+        current,
+        increment,
+        limit,
+        periodYM
+      });
+    }
+
+    const patch: Record<string, number> = { [key]: current + increment };
+
+    const { error: updateError } = await supabase
+      .from("usage_counters_monthly")
+      .update(patch)
+      .eq("id", currentRow.id);
+
+    if (updateError) throw new Error(updateError.message);
+
+    return { ok: true, metric: key, current: current + increment, limit, periodYM };
+  }
+
+  async getCurrentUsage(user: AuthUserContext) {
+    const supabase = getSupabaseAdmin();
+    const periodYM = this.getPeriodYM();
+
+    const { data } = await supabase
+      .from("usage_counters_monthly")
+      .select("*")
+      .eq("user_id", user.userId)
+      .eq("period_ym", periodYM)
+      .maybeSingle();
+
+    return {
+      periodYM,
+      usage: data ?? {
+        ai_messages_count: 0,
+        workout_generations_count: 0,
+        scanner_scans_count: 0
+      }
+    };
+  }
+}
+```
+
+---
+
+# 25) RATE LIMIT REDIS
+
+## 25.1 `apps/api/src/lib/rate-limit/upstash-rate-limit.service.ts`
+
+```ts
+import { Injectable } from "@nestjs/common";
+import { Redis } from "@upstash/redis";
+
+@Injectable()
+export class UpstashRateLimitService {
+  private redis: Redis | null = null;
+
+  private getClient() {
+    if (this.redis) return this.redis;
+
+    if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+      this.redis = new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN
+      });
+    }
+    return this.redis;
+  }
+
+  async hit(key: string, windowSeconds: number, maxHits: number) {
+    const redis = this.getClient();
+    if (!redis) {
+      return { allowed: true, count: 1, remaining: maxHits - 1, resetInSec: windowSeconds, bypass: true };
+    }
+
+    const now = Math.floor(Date.now() / 1000);
+    const bucketKey = `rl:${key}:${Math.floor(now / windowSeconds)}`;
+    const count = await redis.incr(bucketKey);
+    if (count === 1) await redis.expire(bucketKey, windowSeconds);
+
+    const allowed = count <= maxHits;
+    return {
+      allowed,
+      count,
+      remaining: Math.max(0, maxHits - count),
+      resetInSec: windowSeconds
+    };
+  }
+}
+```
+
+## 25.2 Uso sugerido
+
+* Endpoint `/ai/*`: rate-limit por `userId` + rota
+* Endpoint `/scanner/equipment`: rate-limit por `userId`
+* Endpoint `/auth/*` públicos: rate-limit por IP
+
+---
+
+# 26) RAG — ADAPTER + STUB + QDRANT REAL
+
+## 26.1 `apps/api/src/lib/rag/rag-adapter.interface.ts`
+
+```ts
+export interface RetrievedChunk {
+  chunkId: string;
+  documentId: string;
+  title: string;
+  author?: string;
+  year?: number;
+  score: number;
+  content: string;
+  locator?: string;
+  pageStart?: number;
+  pageEnd?: number;
+}
+
+export interface RagRetrieveParams {
+  query: string;
+  topK?: number;
+  minScore?: number;
+  filters?: Record<string, unknown>;
+}
+
+export interface RagAdapter {
+  retrieve(params: RagRetrieveParams): Promise<RetrievedChunk[]>;
+}
+```
+
+## 26.2 `apps/api/src/lib/rag/qdrant.stub.adapter.ts`
+
+```ts
+import { Injectable } from "@nestjs/common";
+import type { RagAdapter, RagRetrieveParams, RetrievedChunk } from "./rag-adapter.interface";
+
+@Injectable()
+export class QdrantStubAdapter implements RagAdapter {
+  async retrieve(params: RagRetrieveParams): Promise<RetrievedChunk[]> {
+    const topK = params.topK ?? 5;
+    const minScore = params.minScore ?? Number(process.env.RAG_MIN_SCORE ?? 0.72);
+
+    const rows: RetrievedChunk[] = [
+      {
+        chunkId: "chunk_1",
+        documentId: "doc_1",
+        title: "Prescrição, Periodização e Métodos do Treinamento de Força",
+        author: "Caio Cavagnolli Meirelles",
+        year: 2022,
+        score: 0.86,
+        content: "Trecho exemplo sobre volume, falha concêntrica e contexto de aplicação.",
+        locator: "p.112-114",
+        pageStart: 112,
+        pageEnd: 114
+      },
+      {
+        chunkId: "chunk_2",
+        documentId: "doc_2",
+        title: "Guia Técnico de Prescrição",
+        author: "Equipe Fitversum",
+        year: 2025,
+        score: 0.77,
+        content: "Trecho exemplo de prescrição baseada em evidências e supervisão.",
+        locator: "sec.2.1"
+      }
+    ];
+
+    return rows.filter(r => r.score >= minScore).slice(0, topK);
+  }
+}
+```
+
+## 26.3 `apps/api/src/lib/rag/qdrant.real.adapter.ts`
+
+```ts
+import { Injectable } from "@nestjs/common";
+import { QdrantClient } from "@qdrant/js-client-rest";
+import type { RagAdapter, RagRetrieveParams, RetrievedChunk } from "./rag-adapter.interface";
+
+@Injectable()
+export class QdrantRealAdapter implements RagAdapter {
+  private client: QdrantClient | null = null;
+  private collection = "fitversum_chunks";
+
+  private getClient() {
+    if (this.client) return this.client;
+    if (!process.env.QDRANT_URL) return null;
+
+    this.client = new QdrantClient({
+      url: process.env.QDRANT_URL,
+      apiKey: process.env.QDRANT_API_KEY
+    });
+    return this.client;
+  }
+
+  async retrieve(params: RagRetrieveParams): Promise<RetrievedChunk[]> {
+    // Observação: este adapter assume que embeddings já foram gerados por outro provider.
+    // Em produção: receber vetor do provider de embeddings e fazer search no Qdrant.
+    // Aqui fica um scaffold real para ligação futura.
+    const client = this.getClient();
+    if (!client) return [];
+
+    // PLACEHOLDER:
+    // 1) gerar embedding do params.query
+    // 2) client.search(this.collection, { vector, limit: topK, filter... })
+    // 3) mapear payload -> RetrievedChunk
+    return [];
+  }
+}
+```
+
+## 26.4 `apps/api/src/lib/rag/citation-normalizer.ts`
+
+```ts
+import crypto from "crypto";
+import type { RetrievedChunk } from "./rag-adapter.interface";
+import type { AISource } from "@fitversum/contracts";
+
+export function normalizeChunksToSources(chunks: RetrievedChunk[]): AISource[] {
+  return chunks.map((c) => ({
+    documentId: c.documentId,
+    title: c.title,
+    author: c.author,
+    year: c.year,
+    pageStart: c.pageStart,
+    pageEnd: c.pageEnd,
+    chunkId: c.chunkId,
+    score: c.score,
+    locator: c.locator
+  }));
+}
+
+export function makeCitationId(chunk: Pick<RetrievedChunk, "documentId" | "chunkId">) {
+  return `cit_${crypto.createHash("sha1").update(`${chunk.documentId}:${chunk.chunkId}`).digest("hex").slice(0, 10)}`;
+}
+
+export function buildShortQuote(text: string, maxLen = 180) {
+  const clean = text.replace(/\s+/g, " ").trim();
+  return clean.length <= maxLen ? clean : `${clean.slice(0, maxLen - 1)}…`;
+}
+```
+
+## 26.5 `apps/api/src/lib/rag/rag.service.ts`
+
+```ts
+import { Injectable } from "@nestjs/common";
+import type { AIChatResponse } from "@fitversum/contracts";
+import type { RagAdapter } from "./rag-adapter.interface";
+import { normalizeChunksToSources, makeCitationId, buildShortQuote } from "./citation-normalizer";
+
+@Injectable()
+export class RagService {
+  private minScore = Number(process.env.RAG_MIN_SCORE ?? 0.72);
+  private minDocs = Number(process.env.RAG_MIN_DOCS ?? 1);
+  private minHits = Number(process.env.RAG_MIN_HITS ?? 2);
+
+  constructor(private readonly ragAdapter: RagAdapter) {}
+
+  async answerWithCitations(
+    message: string,
+    locale: string,
+    includeProductSuggestion = true
+  ): Promise<AIChatResponse> {
+    const retrieved = await this.ragAdapter.retrieve({
+      query: message,
+      topK: Number(process.env.RAG_TOPK ?? 6),
+      minScore: this.minScore
+    });
+
+    const uniqueDocs = new Set(retrieved.map((r) => r.documentId)).size;
+    const gateOk = retrieved.length >= this.minHits && uniqueDocs >= this.minDocs;
+
+    if (!gateOk) {
+      return {
+        answer: locale.startsWith("pt")
+          ? "Não encontrei base suficiente nas fontes aprovadas para responder com segurança. Posso refinar a busca ou sugerir leitura."
+          : "Insufficient approved-source basis to answer safely.",
+        sources: [],
+        safety: { ragUsed: true, blocked: true, reason: "rag_gate_failed" },
+        ...(includeProductSuggestion ? {
+          productSuggestion: { productId: "fitversum-box", why: "Leitura complementar relacionada ao tema consultado." }
+        } : {})
+      };
+    }
+
+    const sources = normalizeChunksToSources(retrieved);
+
+    return {
+      answer: locale.startsWith("pt")
+        ? "Resposta baseada em fontes aprovadas (RAG governado). Considere objetivo, volume, recuperação e supervisão técnica ao aplicar a prescrição."
+        : "Answer based on approved sources (governed RAG).",
+      sources,
+      safety: { ragUsed: true, blocked: false },
+      ...(includeProductSuggestion ? {
+        productSuggestion: { productId: "my-fit-box", why: "Conteúdo complementar sobre o tema pesquisado." }
+      } : {})
+    };
+  }
+
+  buildScannerEvidencePlaceholders() {
+    return [
+      {
+        citationId: makeCitationId({ documentId: "doc_scanner_1", chunkId: "chunk_eq_1" }),
+        title: "Fonte aprovada (scanner)",
+        locator: "p.45-47",
+        quote: buildShortQuote("Trecho governado sobre execução e músculos envolvidos no equipamento identificado.")
+      }
+    ];
+  }
+}
+```
+
+---
+
+# 27) AI MODULE / CONTROLLER (V5)
+
+## 27.1 `apps/api/src/modules/ai/ai.controller.ts`
+
+```ts
+import { BadRequestException, Body, Controller, Get, Post, UseGuards } from "@nestjs/common";
+import { z } from "zod";
+import { RagService } from "../../lib/rag/rag.service";
+import { AuthGuard } from "../../common/guards/auth.guard";
+import { PlansGuard } from "../../common/guards/plans.guard";
+import { Plans } from "../../common/decorators/plans.decorator";
+import { CurrentUser } from "../../common/decorators/current-user.decorator";
+import type { AuthUserContext } from "@fitversum/contracts";
+import { UsageService } from "../../lib/usage/usage.service";
+
+const chatWithSourcesSchema = z.object({
+  message: z.string().min(2),
+  locale: z.string().default("pt-BR"),
+  includeProductSuggestion: z.boolean().optional().default(true)
+});
+
+@Controller("ai")
+export class AiController {
+  constructor(
+    private readonly ragService: RagService,
+    private readonly usageService: UsageService
+  ) {}
+
+  @Post("chat-with-scientific-sources")
+  @UseGuards(AuthGuard, PlansGuard)
+  @Plans("free", "pro", "pro_plus", "b2b", "university")
+  async chat(@Body() body: unknown, @CurrentUser() user: AuthUserContext) {
+    const parsed = chatWithSourcesSchema.safeParse(body);
+    if (!parsed.success) throw new BadRequestException(parsed.error.flatten());
+
+    await this.usageService.assertAndIncrement(user, "ai_messages_count", 1);
+
+    return this.ragService.answerWithCitations(
+      parsed.data.message,
+      parsed.data.locale,
+      parsed.data.includeProductSuggestion
+    );
+  }
+
+  @Get("usage/me")
+  @UseGuards(AuthGuard)
+  async getMyUsage(@CurrentUser() user: AuthUserContext) {
+    return this.usageService.getCurrentUsage(user);
+  }
+}
+```
+
+## 27.2 `apps/api/src/modules/ai/ai.module.ts`
+
+```ts
+import { Module } from "@nestjs/common";
+import { Reflector } from "@nestjs/core";
+import { AiController } from "./ai.controller";
+import { RagService } from "../../lib/rag/rag.service";
+import { UsageService } from "../../lib/usage/usage.service";
+import { QdrantStubAdapter } from "../../lib/rag/qdrant.stub.adapter";
+// Em produção: trocar provider pela factory (stub/real)
+
+@Module({
+  controllers: [AiController],
+  providers: [
+    Reflector,
+    UsageService,
+    RagService,
+    { provide: "RagAdapter", useClass: QdrantStubAdapter },
+    { provide: QdrantStubAdapter, useClass: QdrantStubAdapter },
+    {
+      provide: RagService,
+      useFactory: (adapter: QdrantStubAdapter) => new RagService(adapter),
+      inject: [QdrantStubAdapter]
+    }
+  ],
+  exports: [RagService]
+})
+export class AiModule {}
+```
+
+> Observação: esse módulo está funcional como scaffold. Em V5 real, vale migrar para **factory provider** elegante (`FEATURE_RAG_PROVIDER=stub|qdrant`).
+
+---
+
+# 28) SCANNER (V5) — CONTROLLER + CATÁLOGO
+
+## 28.1 `apps/api/src/lib/training/exercise-catalog.service.ts`
+
+```ts
+import { Injectable } from "@nestjs/common";
+import { getSupabaseAdmin } from "../supabase/supabase-admin";
+
+@Injectable()
+export class ExerciseCatalogService {
+  async suggestByEquipId(equipId: string, limit = 8) {
+    const supabase = getSupabaseAdmin();
+
+    const { data: equipment } = await supabase
+      .from("equipment")
+      .select("id, equip_id, equipment_name")
+      .eq("equip_id", equipId)
+      .single();
+
+    if (!equipment) return [];
+
+    const { data, error } = await supabase
+      .from("equipment_exercise")
+      .select("sort_order, exercise:exercise_id (id, slug, name, exercise_family)")
+      .eq("equipment_id", equipment.id)
+      .eq("is_contraindicated", false)
+      .order("sort_order", { ascending: true })
+      .limit(limit);
+
+    if (error) throw new Error(error.message);
+    return (data ?? []).map((r: any) => r.exercise).filter(Boolean);
+  }
+
+  async musclesByExercises(exerciseIds: string[]) {
+    if (!exerciseIds.length) {
+      return { primeMovers: [], synergists: [], stabilizers: [] };
+    }
+
+    const supabase = getSupabaseAdmin();
+    const { data, error } = await supabase
+      .from("exercise_muscle")
+      .select("exercise_id, muscle_name, role_type")
+      .in("exercise_id", exerciseIds);
+
+    if (error) throw new Error(error.message);
+
+    const prime = new Set<string>();
+    const syn = new Set<string>();
+    const stab = new Set<string>();
+
+    for (const row of data ?? []) {
+      if (row.role_type === "prime_mover") prime.add(row.muscle_name);
+      if (row.role_type === "synergist
